@@ -58,7 +58,7 @@ const onMsg = (sock) => {
         break;
       case '/username':
         io.sockets.in('room1').emit('msg', { name: splitMsg[1], msg: `${socket.name} changed their username to ${splitMsg[1]}.` });
-        socket.name = splitMsg[1];
+        [, socket.name] = splitMsg;
         break;
       case '/roll':
         io.sockets.in('room1').emit('msg', { name: socket.name, msg: `${socket.name} rolled a ${randNum} on a 6 sided die.` });
