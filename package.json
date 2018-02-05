@@ -1,0 +1,21 @@
+{
+  "name": "websockethomework",
+  "version": "1.0.0",
+  "description": "Websocket Chat Homework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests complete\""
+  },
+  "author": "Zachary Winnewisser",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  }
+}
